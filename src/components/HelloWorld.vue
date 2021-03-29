@@ -18,7 +18,7 @@
             <button type="button" class="btn btn-primary" @click="goto('div1')">Timeline</button>
           </span>
           <span class = "buttons">
-            <a href="https://ubishakha.github.io/ubishakha-me/UpadhyayaResume2021.pdf" class="btn btn-success" role="button">Resume</a>
+            <a href="https://ubishakha.github.io/ubishakha-me/upadhyayaresume2021.pdf" class="btn btn-success" role="button">Resume</a>
           </span>
           <span class = "buttons">
               <a href="https://www.linkedin.com/in/bishakha-upadhyaya/" class="btn btn-info" role="button">Linkedin</a>

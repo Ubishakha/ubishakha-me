@@ -6,13 +6,15 @@
           <img alt="Bishakha" src="https://avatars.githubusercontent.com/u/48410779?v=4">
       </div>
       <div class="right-div description">
-        <h2>
-          <p>Hi, I am Bishakha. </p>
-          
-           <p> I am currently a senior with a major in Computer Science and minor in Neuroscience at Knox College aspiring to be a Software Engineer. 
-          
+        <h3>
+          <p class = "desc">Hi, I am Bishakha. </p>
+           <p class = "desc"> I am currently a senior with a major in Computer Science and minor in Neuroscience at Knox College aspiring to be a Software Engineer. 
+             My experiences include work in Fullstack Development and Data Analytics.
           </p>
-          </h2>
+          <p class = "desc">
+           I am constantly trying to learn new things and get better at thinking programatically.     
+          </p>
+          </h3>
 
           <span class = "buttons">
             <button type="button" class="btn btn-primary" @click="goto('div1')">Timeline</button>
@@ -98,7 +100,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
-  margin: 40px 0 0;
+  margin: 30px 0 0;
 }
 ul {
   list-style-type: none;
@@ -108,8 +110,10 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  /* color: #42b983; */
+.desc {
+  /* overflow-wrap: break-word; */
+  font-size: 25px;
+  text-align: left;
 }
 
 .left-div {
@@ -119,7 +123,7 @@ a {
 }
 .right-div {
     color: #737373;
-    max-width: 400px;
+    max-width: 500px;
 }
 .recognitions {
   height: 1000px;

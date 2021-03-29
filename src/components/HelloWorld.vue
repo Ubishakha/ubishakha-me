@@ -3,26 +3,78 @@
     <h1>{{ msg }}</h1>
     <div class="container wrapInfo">
       <div class="left-div">
-          <!-- <img :src="require(`../assets/${imgURL}`)" /> -->
-          <!-- <img src="./assets/logo.png"> -->
           <img alt="Bishakha" src="https://avatars.githubusercontent.com/u/48410779?v=4">
       </div>
       <div class="right-div description">
         <h2>
-          Hi, I am Bishakha. <br>
-          <strong>
-            I am currently a senior with a major in Computer Science and minor in Neuroscience aspiring to become a Software Engineer. 
-          </strong>
+          <p>Hi, I am Bishakha. </p>
+          
+           <p> I am currently a senior with a major in Computer Science and minor in Neuroscience at Knox College aspiring to be a Software Engineer. 
+          
+          </p>
           </h2>
-          <span>
-          <!-- <button type="button" class="btn btn-outline-success">Resume</button> -->
-          <a href="https://ubishakha.github.io/ubishakha-me/Upadhyaya_Resume_2021.pdf" class="btn btn-outline-success" role="button">Resume</a>
-          <a href="https://www.linkedin.com/in/bishakha-upadhyaya/" class="btn btn-outline-info" role="button">Linkedin</a>
-          <!-- <button type="button" class="btn btn-outline-info">LinkedIn</button> -->
+
+          <span class = "buttons">
+            <button type="button" class="btn btn-primary" @click="goto('div1')">Timeline</button>
           </span>
+          <span class = "buttons">
+            <a href="https://ubishakha.github.io/ubishakha-me/Upadhyaya\_Resume\_2021.pdf" class="btn btn-success" role="button">Resume</a>
+          </span>
+          <span class = "buttons">
+              <a href="https://www.linkedin.com/in/bishakha-upadhyaya/" class="btn btn-info" role="button">Linkedin</a>
+          </span> 
+          <!-- <span class = "buttons">
+            <button type="button" class="btn btn-secondary" @click="goto('div1')">More About me</button>
+          </span> -->
       </div>
     </div>
   </div>
+
+  <div class="container recognitions" ref="div1">
+    <div>
+      <h3>Career</h3>
+      <p style="margin:0">
+        <span><strong>2020: &nbsp;</strong>Global Technology Summer Analyst at Bank of America</span>
+      </p>
+      <p style="margin:0">
+        <span><strong>2020: &nbsp;</strong>Started part-time as fullstack developer at csedresearch.org</span>
+      </p>
+      <p style="margin:0">
+        <span><strong>2019: &nbsp;</strong>Fulltime summer research assistant at csedresearch.org</span>
+    </p>
+    <p style="margin:0">
+      <span><strong>2019: &nbsp;</strong>Started part-time as data curator at csedresearch.org</span>
+    </p>
+  </div>
+
+  <div>
+    <h3>Awards</h3>
+    <p style="margin:0">
+      <span><strong>Dean's List: &nbsp;</strong>Winter 2018, Winter 2019, Winter 2020, Spring 2020, Fall 2020, Winter 2021 </span>
+    </p>
+    <p style="margin:0">
+      <span><strong>Baker-Velde Student Research Fund Award: &nbsp;</strong>2019</span>
+    </p>
+    <p style="margin:0">
+      <span><strong>GHC Scholar: &nbsp;</strong>2020</span>
+    </p>
+    <p style="margin:0">
+      <span><strong>RTC Fellow &nbsp;</strong>2020/2021</span>
+    </p>
+  </div>
+  <div>
+    <h3>Publications</h3>
+    <p style="margin:0">
+      <span><strong><a href="https://dl.acm.org/doi/10.1145/3372782.3406251">Exploring the Enacted Computing Curriculum in K-12 Schools in South Asia: Bangladesh, Nepal, Pakistan, and Sri Lanka </a>&nbsp;</strong><br>Aug 2020 | ICER/ACM</span>
+    </p>
+    <p style="margin:0">
+      <span><strong> <a href="https://dl.acm.org/doi/10.1145/3328778.3366809">A Longitudinal Analysis of K-12 Computing Education Research in the United States: Implications and Recommendations for Change </a>&nbsp;</strong><br>Feb 2020 | SIGCSE/ACM</span>
+    </p>
+    <p style="margin:0">
+      <span><strong><a href="https://dl.acm.org/doi/10.1145/3328778.3372710">Dynamic Data Visualization for CSEdResearch.org using Tableau and MySQL </a>&nbsp;</strong><br>Feb 2020 | SIGCSE/ACM</span>
+    </p>
+  </div>
+</div>
   
 </template>
 
@@ -32,6 +84,13 @@ export default {
   props: {
     msg: String,
     Url: String
+  },
+  methods:{
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    }
   }
 }
 </script>
@@ -50,7 +109,7 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  /* color: #42b983; */
 }
 
 .left-div {
@@ -61,5 +120,14 @@ a {
 .right-div {
     color: #737373;
     max-width: 400px;
+}
+.recognitions {
+  height: 1000px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.buttons{
+  padding: 3px;
 }
 </style>
